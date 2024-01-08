@@ -1,2 +1,2 @@
-# DETR_tensorRT_Cplusplus
-DETR tensorRT C++部署。
+# yolov6_tensorrt_Cplusplus
+This is a C++ code about yolov6 TensorRT
