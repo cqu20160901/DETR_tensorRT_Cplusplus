@@ -50,7 +50,7 @@ tensorRT 时耗
 
 ## 替换模型说明
 
-1）按照本实例给的导出onnx方式导出对应的onnx；导出的onnx模型建议simplify后再转trt模型。
+1）导出的onnx模型建议simplify后，修改Gather层后再转trt模型。
 
 2）注意修改后处理相关 postprocess.hpp 中相关的类别参数。
 
