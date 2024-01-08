@@ -10,18 +10,18 @@ int main()
     int img_width = SrcImage.cols;
     int img_height = SrcImage.rows;
 
-    CNN YOLO(OnnxFile, SaveTrtFilePath, 1, 3, 640, 640, 3);
-    YOLO.ModelInit();
-    YOLO.Inference(SrcImage);
+    CNN DETR(OnnxFile, SaveTrtFilePath, 1, 3, 640, 640, 3); // 1, 3, 640, 640, 3 前四个为模型输入的NCWH, 3为模型输出叶子节点的个数+1，（本示例中的onnx模型输出有2个叶子节点，再+1=3）
+    DETR.ModelInit();
+    DETR.Inference(SrcImage);
 
-    for (int i = 0; i < YOLO.DetectiontRects_.size(); i += 6)
+    for (int i = 0; i < DETR.DetectiontRects_.size(); i += 6)
     {
-        int classId = int(YOLO.DetectiontRects_[i + 0]);
-        float conf = YOLO.DetectiontRects_[i + 1];
-        int xmin = int(YOLO.DetectiontRects_[i + 2] * float(img_width) + 0.5);
-        int ymin = int(YOLO.DetectiontRects_[i + 3] * float(img_height) + 0.5);
-        int xmax = int(YOLO.DetectiontRects_[i + 4] * float(img_width) + 0.5);
-        int ymax = int(YOLO.DetectiontRects_[i + 5] * float(img_height) + 0.5);
+        int classId = int(DETR.DetectiontRects_[i + 0]);
+        float conf = DETR.DetectiontRects_[i + 1];
+        int xmin = int(DETR.DetectiontRects_[i + 2] * float(img_width) + 0.5);
+        int ymin = int(DETR.DetectiontRects_[i + 3] * float(img_height) + 0.5);
+        int xmax = int(DETR.DetectiontRects_[i + 4] * float(img_width) + 0.5);
+        int ymax = int(DETR.DetectiontRects_[i + 5] * float(img_height) + 0.5);
 
         char text1[256];
         sprintf(text1, "%d:%.2f", classId, conf);
@@ -31,7 +31,7 @@ int main()
 
     imwrite("/zhangqian/workspaces1/TensorRT/detr_trt_Cplusplus/images/result.jpg", SrcImage);
 
-    printf("== obj: %d \n", int(float(YOLO.DetectiontRects_.size()) / 6.0));
+    printf("== obj: %d \n", int(float(DETR.DetectiontRects_.size()) / 6.0));
 
     return 0;
 }
