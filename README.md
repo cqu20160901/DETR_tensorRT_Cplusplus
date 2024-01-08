@@ -6,6 +6,11 @@ TensorRT版本：TensorRT-8.2.1.8，（最早使用TensorRT-7.1.3.4 运行报错
 
 由于模型较大无法直接上传，onnx和tensorrt 模型文件，[模型存储链接](https://github.com/cqu20160901/DETR_tensorRT_Cplusplus/releases)。
 
+
+## 建议先看
+
+[解决tesorrt 推理输出结果全为0的问题参考](https://blog.csdn.net/zhangqian_1/article/details/135453388)
+
 ## 编译
 
 修改 CMakeLists.txt 对应的TensorRT位置
@@ -97,4 +102,5 @@ tensorRT 时耗
 ## 相关链接
 
 [python tensorrt 部署](https://github.com/cqu20160901/DETR_onnx_tensorRT)
+
 [解决tesorrt 推理输出结果全为0的问题参考](https://blog.csdn.net/zhangqian_1/article/details/135453388)
