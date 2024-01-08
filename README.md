@@ -4,6 +4,7 @@
 
 TensorRT版本：TensorRT-8.2.1.8，（最早使用TensorRT-7.1.3.4 运行报错，使用TensorRT-8.2.1.8运行结果正常）。
 
+由于模型较大无法直接上传，onnx和tensorrt 模型文件，[模型存储链接](https://github.com/cqu20160901/DETR_tensorRT_Cplusplus/releases)。
 
 ## 编译
 
