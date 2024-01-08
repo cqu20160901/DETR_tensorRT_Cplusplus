@@ -9,7 +9,7 @@ TensorRT版本：TensorRT-8.2.1.8，（最早使用TensorRT-7.1.3.4 运行报错
 
 ## 建议先看
 
-[解决tesorrt 推理输出结果全为0的问题参考](https://blog.csdn.net/zhangqian_1/article/details/135453388)
+[解决tesorrt 推理输出结果全为0问题](https://blog.csdn.net/zhangqian_1/article/details/135453388)
 
 ## 编译
 
