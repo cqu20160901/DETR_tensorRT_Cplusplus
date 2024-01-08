@@ -97,3 +97,4 @@ tensorRT 时耗
 ## 相关链接
 
 [python tensorrt 部署](https://github.com/cqu20160901/DETR_onnx_tensorRT)
+[解决tesorrt 推理输出结果全为0的问题参考](https://blog.csdn.net/zhangqian_1/article/details/135453388)
